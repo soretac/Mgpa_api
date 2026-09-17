@@ -166,15 +166,28 @@ STORAGE = {
 
 
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default = os.environ['DATABASE_URL'],
-        conn_max_age=600
-        # conn_health_checks=True,
-    ),
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default = os.environ['DATABASE_URL'],
+#         conn_max_age=600
+#         # conn_health_checks=True,
+#     ),
 
+# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django_tenants.postgresql_backend',
+        'NAME':'mgpa_apidb',
+        'USER':'postgres',
+        'HOST':'localhost',
+        'PASSWORD':'Repentance',
+        'PORT':5432,
+    }
 }
 
+DATABASES['default'] = dj_database_url.config(default = os.environ['DATABASE_URL'], conn_max_age=600)
+DATABASES['default']['ENGINE'] = 'django_tenants.postgresql_backend'
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
