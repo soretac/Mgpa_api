@@ -59,7 +59,6 @@ SHARED_APPS = [
     "corsheaders",
     'django_tenants',
     'Client',
-    'MgpaUsers',
     'Entreprise',
     'Parameters',
     "anymail",
