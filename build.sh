@@ -4,6 +4,8 @@ pip install -r requirements.txt
 
 python manage.py collectstatic --no-input
 
-python manage.py migrate_schemas--shared 
+# python manage.py migrate_schemas--shared 
 
-python manage.py migrate_schemas--tenant 
+# python manage.py migrate_schemas--tenant 
+
+python manage.py migrate_schemas
