@@ -20,5 +20,6 @@ python manage.py migrate MatRoulant
 python manage.py migrate Parameters
 python manage.py migrate PreventApps
 python manage.py migrate Travaux
+python manage.py migrate MgpaUsers
 
 
