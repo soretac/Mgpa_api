@@ -84,6 +84,7 @@ TENANT_APPS = [
     'MatRoulant',
     'CompteurApps',
     'PreventApps',
+    'Corrective',
     'Travaux',
     "anymail",
     'guardian',
