@@ -79,7 +79,7 @@ TENANT_APPS = [
     'rest_framework',
     'djoser',
     'corsheaders',
-    # 'MgpaUsers',
+    'MgpaUsers',
     'Entreprise',
     'MatRoulant',
     'CompteurApps',
