@@ -6,9 +6,9 @@ python manage.py collectstatic --no-input
 
 # python manage.py migrate_schemas
 
-# python manage.py migrate_schemas --shared 
+python manage.py migrate_schemas --shared 
 
-python manage.py migrate_schemas --tenant 
+# python manage.py migrate_schemas --tenant 
 
 # python manage.py migrate Client
 # python manage.py migrate CompteurApps
