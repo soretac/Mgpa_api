@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Identifiants</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href='{% static "css/styles.css" %}' rel="stylesheet" type="text/css" media="screen"/>
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div class="card-body"></div>
+
+                        <img src="static/images/logo.jpeg">
+                        <h2 class="mt-4">SORETAC</br>Société de Réparation et des Techniques Automobile au Cameroun</h2>
+
+                        <div class="card mb-4">
+                            <div class="card-body" >
+                                Bienvenu sur l'application MGPA. Voici les coordonnées de votre
+                                entreprise et vos identifiants de connexion à l'application.
+                                S'il se trouve des erreurs dans ces coordonnées, bien vouloir
+                                nous en informer avant d'activer votre compte avec vos
+                                identifiants ci-dessous. Merci.
+                                </br>
+
+
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <div class="row" align-content-center><h3>Vos identifiants:</h3></div>
+
+                                <div class="row">
+                                    <div class="col-lg-5" bg-warning>
+                                        <div class="row"><strong>Nom de l'entreprise :</strong> {{ nom_ese }}</div>
+                                        <div class="row"><strong>Code entreprise :</strong> {{ code }} </div>
+                                        <div class="row"><strong>Nom utilisateur :</strong> {{ user_admin }}</div>
+                                        <div class="row"><strong>Mot de passe administrateur :</strong> {{ mdp_admin }}</div>
+
+                                    </div>
+                                    <div class="col-lg-7" bg-secondary>
+                                        Vos identifiants ci-contre vous permettent d'activer votre compte.
+                                        Le lien suivant <em> <strong>"{{domaine}}"</strong> </em> est désormais votre nom de domaine. Veuillez cliquer
+                                        sur ce lien et renseigner le nom de votre entreprise et votre code.
+                                        Les identifiants du compte administrateur ci-contre vous permettront
+                                        de vous connecter comme super admministrateur et d'avoir accès à
+                                        toutes les fonctionnalités de l'application.
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            </br>
+                            <div class="card-body">
+                            </br></br>
+                            <div
+                                class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                                <img
+                                    src="{{ logo_ese }}"
+                                    class="img-fluid"
+                                    alt="Sample image"
+                                />
+                                <div>
+                                    <h6>Logo</h6>
+                                    <p>{{sigle}}</p>
+                                </div>
+                            </div>
+
+                                </br>
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>IDENTIFIANTS</th>
+                                            <th>VALEURS</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>Nom de l'entreprise</td>
+                                            <td>{{nom_ese}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <div class="d-flex ">
+                                                <img src="" alt="">
+                                                <div>
+                                                  <h6>Logo</h6>
+                                                  <p>{{logo_ese}}</p>
+                                                </div>
+                                            </div>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom de domaine</td>
+                                            <td>{{nom_domaine}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Sigle</td>
+                                            <td>{{schema_sigle}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td>{{email}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Site web</td>
+                                            <td>{{siteweb}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Date d'enregistrement</td>
+                                            <td>{{created_on}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Période de Validité</td>
+                                            <td>{{periode}}</td>
+
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>Nombre d'utilisateurs</td>
+                                            <td>{{nbre_users}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Nombre de véhicule</td>
+                                            <td>{{nbre_engin}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Téléphone N°1</td>
+                                            <td>{{phone1}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Téléphone N°2</td>
+                                            <td>{{phone2}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Adresse</td>
+                                            <td>{{adresse}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Slogan</td>
+                                            <td>{{slogan}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>ville siège</td>
+                                            <td>{{ville_siege}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Pays</td>
+                                            <td>{{pays}}</td>
+
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>Numéro d'Identifiant Unique</td>
+                                            <td>{{niu_ese}}</td>
+
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>Montant d'abonnement</td>
+                                            <td>{{mont_periode}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Montant du dossier</td>
+                                            <td>{{mont_dossier}}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Montant checking</td>
+                                            <td>{{mont_check}}</td>
+
+                                        </tr>
+                                        
+                                       
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                </br></br>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; www.soretac.com 2023</div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
